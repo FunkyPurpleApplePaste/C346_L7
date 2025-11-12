@@ -9,7 +9,7 @@ const Question = ({ question, image, options, onChange }) => {
             <Text style={{ fontSize: 20, fontWeight: 'bold', marginBottom: 10 }}>{question}</Text>
             <Image
                 source={{ uri: image }}
-                style={{ width: 370, height: 300, borderRadius: 10, marginBottom: 10 }}
+                style={{ width: 370, height: 300, borderRadius: 30, marginBottom: 10 }}
             />
             <Picker
                 selectedValue={onChange.selected}
@@ -18,7 +18,7 @@ const Question = ({ question, image, options, onChange }) => {
             >
                 <Picker.Item label="Choose an answer..." value="" />
                 {options.map((option, index) => (
-                    <Picker.Item key={index} label={option} value={option} />
+                    <Picker.Item style={{ fontSize: 20, fontWeight: 'bold'}} key={index} label={option} value={option} />
                 ))}
             </Picker>
         </View>
